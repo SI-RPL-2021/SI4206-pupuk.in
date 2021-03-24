@@ -22,6 +22,9 @@ Route::get('/admin', function () {
 Route::get('/profile', function () {
     return view('profile');
 });
+Route::get('/request', function () {
+    return view('request');
+});
 
 Auth::routes();
 
