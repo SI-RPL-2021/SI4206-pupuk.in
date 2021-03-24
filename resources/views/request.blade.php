@@ -38,7 +38,7 @@
                         <form class="mt-4">
                             <div class="form-group row">
                                 <div class="col ml-4">
-                                    <label class="col-form-label">Nama petani</label>
+                                    <label class="col-form-label">Nama  petani</label>
                                 </div>
                                 <div class="col-6 mr-5">
                                     <input type="text" class="form-control" placeholder="Masukan nama">
