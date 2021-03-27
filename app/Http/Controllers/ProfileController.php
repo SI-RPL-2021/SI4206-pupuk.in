@@ -8,15 +8,30 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    public function editprofile(){
+    public function profile(){
         $user = User::find(Auth::user()->id);
-        return view('Member.profile',compact('user'));
+        return view('profile',compact('user'));
     }
+
     public function updateprofile(Request $request){
-        User::where('id', Auth::user()->id)->update([
-            'name' => $request->name,
-            'email' => $request->email,
-        ]);
-        return redirect('/profile');  
+        if($request->photo == null){
+            User::where('id', Auth::user()->id)->update([
+                'name' => $request->name,
+                'email' => $request->email,
+            ]);
+        }else{
+            $file = time().'.'.$request->photo->extension();
+            $request->photo->move(public_path('img/photo'),$file);
+
+            User::where('id', Auth::user()->id)->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'photo' => $file,
+            ]);
+        }
+        
+    return redirect('/profile');  
     }
+
+    
 }

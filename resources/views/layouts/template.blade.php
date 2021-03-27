@@ -39,10 +39,6 @@
                     <div class="navbar-collapse-header">
                         <div class="row">
                             <div class="col-6 collapse-brand">
-                                <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard">
-                                    <img
-                                        src="https://argon-dashboard-pro-laravel.creative-tim.com/argon/img/brand/blue.png">
-                                </a>
                             </div>
                             <div class="col-6 collapse-close">
                                 <button type="button" class="navbar-toggler" data-toggle="collapse"
@@ -79,7 +75,7 @@
                                 aria-expanded="false">
                                 <div class="media align-items-center">
                                     <span class="avatar avatar-sm rounded-circle">
-                                        <img alt="Image placeholder" src="/img/logokotak.png">
+                                        <img alt="" src="/img/photo/{{ Auth::user()->photo}}">
                                     </span>
                                     <div class="media-body ml-2 d-none d-lg-block">
                                         <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
@@ -158,8 +154,8 @@
     <script src="/argon/vendor/list.js/dist/list.min.js"></script>
 
     <!-- Argon JS -->
-    <script src="/argon/js/argon.js?v=1.0.1"></script>
-    <script src="/argon/js/demo.min.js"></script>
+    <script src="/argon/argon/js/argon.js?v=1.0.1"></script>
+    <script src="/argon/argon/js/demo.min.js"></script>
 </body>
 
 </html>
