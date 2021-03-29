@@ -49,9 +49,11 @@
 
                     <hr class="my-4">
 
-                    <form method="post" action=""
+                    <form method="post" action="{{ route('profile.changePass') }}" enctype="multipart/form-data"
                         autocomplete="off">
-                        
+
+                        @csrf 
+
                         <h6 class="heading-small text-muted mb-4">Password</h6>
                         <div class="pl-lg-4">
                             <div class="form-group">
@@ -62,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-password">New Password</label>
-                                <input type="password" name="password" id="input-password" class="form-control"
+                                <input type="password" name="new_password" id="input-password" class="form-control"
                                     placeholder="New Password" value="" required="">
 
                             </div>
@@ -72,7 +74,6 @@
                                 <input type="password" name="password_confirmation" id="input-password-confirmation"
                                     class="form-control" placeholder="Confirm New Password" value="" required="">
                             </div>
-
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success mt-4">Change password</button>
                             </div>
