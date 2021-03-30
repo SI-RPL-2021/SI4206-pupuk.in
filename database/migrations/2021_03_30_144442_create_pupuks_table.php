@@ -17,7 +17,7 @@ class CreatePupuksTable extends Migration
             $table->id();
             $table->string('nama');
             $table->double('harga');
-            $table->double('kuota/10 m2');
+            $table->double('kuota_per_10m2');
             $table->timestamps();
         });
     }

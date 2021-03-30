@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property string $nama
  * @property float $harga
- * @property float $kuota/10 m2
+ * @property float $kuota_per_10m2
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * 
@@ -30,13 +30,13 @@ class Pupuk extends Model
 
 	protected $casts = [
 		'harga' => 'float',
-		'kuota/10 m2' => 'float'
+		'kuota_per_10m2' => 'float'
 	];
 
 	protected $fillable = [
 		'nama',
 		'harga',
-		'kuota/10 m2'
+		'kuota_per_10m2'
 	];
 
 	public function pembayarans()

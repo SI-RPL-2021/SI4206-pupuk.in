@@ -37,4 +37,23 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    protected function authenticated($request, $user)
+    {
+        global $redirectTo;
+        if($user->role->role === 'Admin') {
+            return redirect()->intended(route('admin.dashboard'));
+        }else if($user->role->role === 'Petani'){
+            return redirect()->intended(route('petani.home'));
+        }
+        else if($user->role->role === 'Distributor'){
+            return redirect()->intended(route('distributor.home'));
+        }
+        // if($user->role->name === 'Distributor'){
+        //     return redirect()->intended(route('admin.dashboard'));
+        // }
+
+        return redirect()->intended($redirectTo);
+    }
+    
 }
