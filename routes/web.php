@@ -40,7 +40,8 @@ Route::middleware('auth')->group(function(){
     });
     Route::middleware('role:Petani')->prefix('petani')->group(function(){
         Route::get('/home', [PetaniController::class, 'home'])->name('petani.home');
-        Route::get('/Data', [PetaniController::class, 'data'])->name('petani.data');
+        Route::get('/data', [PetaniController::class, 'data'])->name('petani.data');
+        Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('admin.addPetani');
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');

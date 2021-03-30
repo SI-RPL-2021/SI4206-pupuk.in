@@ -61,13 +61,13 @@ class User extends Authenticatable
 		return $this->belongsTo(Role::class);
 	}
 
-	public function distributors()
+	public function distributor()
 	{
-		return $this->hasMany(Distributor::class);
+		return $this->hasOne(Distributor::class);
 	}
 
-	public function petanis()
+	public function petani()
 	{
-		return $this->hasMany(Petani::class);
+		return $this->hasOne(Petani::class);
 	}
 }
