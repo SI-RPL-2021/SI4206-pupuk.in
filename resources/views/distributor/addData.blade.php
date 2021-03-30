@@ -21,13 +21,12 @@
                             <div class="form-group">
                                 <label class="form-control-label" for="input-name">Alamat</label>
                                 <input type="text" name="alamat" id="input-name" class="form-control" placeholder="Alamat"
-                                    value="" required="" autofocus="">
-
+                                    value="{{$distributor->alamat}}" required="" autofocus="">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-harga">No Hp</label>
                                 <input type="text" name="no_hp" id="input-harga" class="form-control"
-                                    placeholder="no_telp" value="" required="">
+                                    placeholder="no_telp" value="{{$distributor->no_telp}}" required="">
 
                             </div>
                             <div class="text-center">

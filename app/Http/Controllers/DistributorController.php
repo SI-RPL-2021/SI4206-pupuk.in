@@ -14,7 +14,9 @@ class DistributorController extends Controller
         return view('distributor.home');
     }
     public function data(){
-        return view('distributor.addData');
+        $distributor_id = Auth::user()->distributor->id;
+        $distributor = Distributor::findOrFail($distributor_id);
+        return view('distributor.addData',compact('distributor'));
     }
     public function addData(Request $request){
         $distributor = Distributor::updateOrCreate([
