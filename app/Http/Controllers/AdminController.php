@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Pupuk;
 use Brian2694\Toastr\Facades\Toastr;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -19,6 +20,8 @@ class AdminController extends Controller
             'nama' => $request->nama,
             'harga' => $request->harga,
             'kuota_per_10m2' => $request->kuota_per_10m2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
         ]);
 
         if($pupuk){

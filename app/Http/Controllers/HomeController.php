@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Brian2694\Toastr\Facades\Toastr;
+use Brian2694\Toastr\Toastr as ToastrToastr;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller

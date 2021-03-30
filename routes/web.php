@@ -5,6 +5,7 @@ use App\Http\Controllers\DistributorController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PetaniController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Distributor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -35,11 +36,11 @@ Route::middleware('auth')->group(function(){
     Route::middleware('role:Distributor')->prefix('distributor')->group(function(){
         Route::get('/home', [DistributorController::class, 'home'])->name('distributor.home');
         Route::get('/Data', [DistributorController::class, 'data'])->name('distributor.data');
+        Route::post('/addData', [DistributorController::class, 'addData'])->name('admin.addData');
     });
     Route::middleware('role:Petani')->prefix('petani')->group(function(){
         Route::get('/home', [PetaniController::class, 'home'])->name('petani.home');
         Route::get('/Data', [PetaniController::class, 'data'])->name('petani.data');
-        // Route::get('/', [PetaniController::class, 'home'])->name('petani.home');
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
