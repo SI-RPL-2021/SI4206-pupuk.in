@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Brian2694\Toastr\Facades\Toastr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -30,7 +31,7 @@ class ProfileController extends Controller
                 'photo' => $file,
             ]);
         }
-        
+        Toastr::success('Data changed successfully', 'Success!');    
     return redirect()->route('profile');;  
     }
     public function changePassword(Request $request)
@@ -40,7 +41,7 @@ class ProfileController extends Controller
             'new_password' => 'required|string|min:8',
         ]);
         if ($request->new_password != $request->password_confirmation) {
-            // Toastr::error('', 'Konfirmasi password baru tidak sama!');
+            Toastr::error('', 'Konfirmasi password baru tidak sama!');
             return redirect()->route('profile');
         }
 
@@ -51,11 +52,11 @@ class ProfileController extends Controller
                 'password' => Hash::make($request->new_password)
             ]);
         } else {
-            // Toastr::error('', 'Password Lama salah!');
+            Toastr::error('', 'Password Lama salah!');
             return redirect()->route('profile');
         }
 
-        // Toastr::success('Password changed successfully', 'Success!');
+        Toastr::success('Password changed successfully', 'Success!');
         return redirect()->route('profile');
     }
     
