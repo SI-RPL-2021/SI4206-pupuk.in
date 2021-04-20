@@ -15,8 +15,12 @@ class PetaniController extends Controller
         return view('petani.home');
     }
     public function data(){
-        $petani_id = Auth::user()->petani->id;
-        $petani = Petani::findOrFail($petani_id);
+        $petani_id = Auth::user()->petani->id ?? 0;
+        if($petani_id){
+            $petani = Petani::findOrFail($petani_id);
+        }else{
+            $petani = null ;
+        }
         $distributors = Distributor::all();
         return view('petani.addData', compact('distributors', 'petani'));
     }
@@ -40,5 +44,6 @@ class PetaniController extends Controller
         }
         return redirect()->route('petani.data');
     }
+    
 }
 

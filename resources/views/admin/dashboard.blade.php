@@ -25,24 +25,26 @@
                             </thead>
                             <tbody class="list">
                                 <tr>
+                                    @foreach($distributors as $distributor)
                                     <th scope="row">
                                         <div class="media align-items-center">
                                             <a href="#" class="avatar rounded-circle mr-3">
-                                                <img alt="" src="">
+                                                <img alt="" src="{{asset('/img/photo/$distributor->user->photo')}}">
                                             </a>
                                             <div class="media-body">
-                                                <span class="name mb-0 text-sm">Argon Design System</span>
+                                                <span class="name mb-0 text-sm">{{ $distributor->user->name }}</span>
                                             </div>
                                         </div>
                                     </th>
                                     <td>
-                                        <!-- email -->
+                                        {{ $distributor->user->email }}
                                     </td>
                                     <td>
                                         <!-- alamat -->
+                                        {{ $distributor->alamat }}
                                     </td>
                                     <td>
-                                        <!-- no_hp -->
+                                        {{ $distributor->no_telp }}
                                     </td>
                                     <td>
                                         <div class="d-flex align-items-center">
@@ -58,8 +60,8 @@
                                     </td>
                                     <td>
                                         <span class="badge badge-dot mr-4">
-                                            <i class="bg-warning"></i>
-                                            <span class="status">pending</span>
+                                            <i class="bg-success"></i>
+                                            <span class="status">{{ $distributor->status }}</span>
                                         </span>
                                     </td>
                                     <td class="text-right">
@@ -74,6 +76,7 @@
                                             </div>
                                         </div>
                                     </td>
+                                    @endforeach
                                 </tr>
                             </tbody>
                         </table>

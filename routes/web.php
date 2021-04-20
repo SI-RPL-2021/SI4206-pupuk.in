@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/coba', function () {
+    return view('layouts.template4');
+});
 
 
 Auth::routes();
@@ -41,7 +44,7 @@ Route::middleware('auth')->group(function(){
     Route::middleware('role:Petani')->prefix('petani')->group(function(){
         Route::get('/home', [PetaniController::class, 'home'])->name('petani.home');
         Route::get('/data', [PetaniController::class, 'data'])->name('petani.data');
-        Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('admin.addPetani');
+        Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('petani.addPetani');
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');

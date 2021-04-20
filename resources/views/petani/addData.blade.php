@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{ route('admin.addPetani') }}" autocomplete="off"
+                    <form method="post" action="{{ route('petani.addPetani') }}" autocomplete="off"
                         enctype="multipart/form-data">
                         @csrf
                         <h6 class="heading-small text-muted mb-4">Petani information</h6>
@@ -21,26 +21,26 @@
                             <div class="form-group">
                                 <label class="form-control-label" for="input-name">Alamat</label>
                                 <input type="text" name="alamat" id="input-name" class="form-control" placeholder="Alamat"
-                                    value="{{$petani->alamat}}" required="" autofocus="">
+                                    value="{{$petani->alamat ?? ''}}" required="" autofocus="">
 
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-harga">No Hp</label>
                                 <input type="text" name="no_hp" id="input-harga" class="form-control"
-                                    placeholder="no_telp" value="{{$petani->no_telp}}" required="">
+                                    placeholder="no_telp" value="{{$petani->no_telp ?? ''}}" required="">
 
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-harga">luas tanah</label>
                                 <input type="number" name="luas_tanah" id="input-harga" class="form-control"
-                                    placeholder="" value="{{$petani->luas_tanah}}" required="">
+                                    placeholder="" value="{{$petani->luas_tanah ?? ''}}" required="">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-harga">Distributor</label>
                                 <select class="form-control" name="distributor_id" id="exampleFormControlSelect1">
                                 <option value="" selected disabled>Pilih Distributor</option>
                                 @foreach($distributors as $distributor)
-                                <option value="{{ $distributor->id }}" {{ $petani->distributor_id == $distributor->id ? 'selected' : '' }}>{{ $distributor->user->name }}</option>
+                                <option value="{{ $distributor->id }}" {{ $petani != null ? ($petani->distributor_id == $distributor->id ? 'selected' : '' ) : '' }}>{{ $distributor->user->name }}</option>
                                 @endforeach
                             </select>
                             </div>
