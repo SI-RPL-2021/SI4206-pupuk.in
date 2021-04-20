@@ -54,7 +54,7 @@
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('petani.home')}}">
+                            <a class="nav-link" href="{{route('distributor.home')}}">
                                 <span class="nav-link-inner--text">Home</span>
                             </a>
                         </li>
@@ -91,7 +91,7 @@
                                     <i class="ni ni-single-02"></i>
                                     <span>My profile</span>
                                 </a>
-                                <a href="{{route('petani.data')}}" class="dropdown-item">
+                                <a href="{{route('distributor.data')}}" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
                                     <span>Add Data</span>
                                 </a>
