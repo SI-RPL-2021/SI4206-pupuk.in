@@ -20,7 +20,7 @@
 </head>
 
 <body>
- <div class="container mt-5">
+<div class="container mt-5">
                 <table class="table table-bordered text-center table-striped">
                     <br>
                     <h5 class="table-title text-center"> <b>Daftar Data Petani</b></h5>
