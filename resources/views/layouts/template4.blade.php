@@ -13,6 +13,7 @@
     <link href="{{asset ('/img/logokotak.png')}}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="{{asset('/argon/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
@@ -243,6 +244,7 @@
     <!-- Argon JS -->
     <!-- <script src="/argon/argon/js/argon.js?v=1.0.1"></script> -->
     <!-- <script src="/argon/argon/js/demo.min.js"></script> -->
+    
 
 </body>
 

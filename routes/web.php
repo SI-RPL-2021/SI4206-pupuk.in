@@ -27,7 +27,9 @@ Route::get('/', function () {
 Route::get('/coba', function () {
     return view('layouts.template4');
 });
-
+Route::get('/das', function () {
+    return view('admin.dashboardd');
+});
 
 Auth::routes();
 
