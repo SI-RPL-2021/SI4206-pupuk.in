@@ -13,10 +13,10 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="#"
-                        autocomplete="off" enctype="multipart/form-data">
-                        <input type="hidden" name="_token" value="grRy6AIwzkRbEW6x8n0c31zN6PquLO5BQgD4FOhD"> <input
-                            type="hidden" name="_method" value="put">
+                    <form method="post" action="{{ route('profile.update') }}" autocomplete="off"
+                        enctype="multipart/form-data">
+                        @csrf
+                        @method('patch')
                         <h6 class="heading-small text-muted mb-4">User information</h6>
 
 
@@ -24,21 +24,20 @@
                             <div class="form-group">
                                 <label class="form-control-label" for="input-name">Name</label>
                                 <input type="text" name="name" id="input-name" class="form-control" placeholder="Name"
-                                    value="" required="" autofocus="">
+                                    value="{{ $user->name}}" required="" autofocus="">
 
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-email">Email</label>
                                 <input type="email" name="email" id="input-email" class="form-control"
-                                    placeholder="Email" value="" required="">
+                                    placeholder="Email" value="{{ $user->email}}" required="">
 
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Profile photo</label>
                                 <div class="custom-file">
                                     <label class="custom-file-label" for="input-picture">Select profile photo</label>
-                                    <input type="file" name="photo" class="custom-file-input" id="input-picture"
-                                        accept="image/*">
+                                    <input type="file" name="photo" class="custom-file-input" id="input-picture">
                                 </div>
 
                             </div>
@@ -47,14 +46,15 @@
                             </div>
                         </div>
                     </form>
+
                     <hr class="my-4">
-                    <form method="post" action="https://argon-dashboard-pro-laravel.creative-tim.com/profile/password"
+
+                    <form method="post" action="{{ route('profile.changePass') }}" enctype="multipart/form-data"
                         autocomplete="off">
-                        <input type="hidden" name="_token" value="grRy6AIwzkRbEW6x8n0c31zN6PquLO5BQgD4FOhD"> <input
-                            type="hidden" name="_method" value="put">
+
+                        @csrf 
+
                         <h6 class="heading-small text-muted mb-4">Password</h6>
-
-
                         <div class="pl-lg-4">
                             <div class="form-group">
                                 <label class="form-control-label" for="input-current-password">Current Password</label>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-password">New Password</label>
-                                <input type="password" name="password" id="input-password" class="form-control"
+                                <input type="password" name="new_password" id="input-password" class="form-control"
                                     placeholder="New Password" value="" required="">
 
                             </div>
@@ -74,7 +74,6 @@
                                 <input type="password" name="password_confirmation" id="input-password-confirmation"
                                     class="form-control" placeholder="Confirm New Password" value="" required="">
                             </div>
-
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success mt-4">Change password</button>
                             </div>

@@ -29,7 +29,7 @@
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                    <img src="{{asset('/img/logopanjang.png')}}" />
+                    <img src="/img/logopanjang.png" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
                     aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,13 +54,13 @@
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{route('petani.home')}}">
-                                <span class="nav-link-inner--text">Home</span>
+                            <a class="nav-link" href="{{route('admin.dashboard')}}">
+                                <span class="nav-link-inner--text">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lilili</span>
+                            <a class="nav-link" href="{{route('admin.pupuk')}}">
+                                <span class="nav-link-inner--text">AddPupuk</span>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -90,10 +90,6 @@
                                 <a href="/profile" class="dropdown-item">
                                     <i class="ni ni-single-02"></i>
                                     <span>My profile</span>
-                                </a>
-                                <a href="{{route('petani.data')}}" class="dropdown-item">
-                                    <i class="ni ni-single-02"></i>
-                                    <span>Add Data</span>
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
