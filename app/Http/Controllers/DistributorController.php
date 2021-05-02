@@ -13,6 +13,15 @@ class DistributorController extends Controller
     public function home(){
         return view('distributor.home');
     }
+    public function data(){
+        $distributor_id = Auth::user()->distributor->id ?? 0;
+        if($distributor_id){
+            $distributor = Distributor::findOrFail($distributor_id);
+        }else{
+            $distributor = null ;
+        }
+        return view('distributor.addData',compact('distributor'));
+    }
     public function addData(Request $request){
         $distributor = Distributor::updateOrCreate([
             'user_id'=> Auth::user()->id
@@ -31,10 +40,6 @@ class DistributorController extends Controller
         }
         return redirect()->route('distributor.data');
     }
-    public function data(){
-        $distributor_id = Auth::user()->distributor->id;
-        $distributor = Distributor::findOrFail($distributor_id);
-        return view('distributor.addData',compact('distributor'));
-    }
+    
     
 }
