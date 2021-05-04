@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DistributorController;
 use App\Http\Controllers\HomeController;
@@ -26,7 +27,21 @@ Route::get('/', function () {
 Route::get('/coba', function () {
     return view('layouts.template4');
 });
-
+Route::get('/das', function () {
+    return view('admin.dashboardd');
+});
+Route::get('/ambil', function () {
+    return view('petani.pengambilan');
+});
+Route::get('/form', function () {
+    return view('petani.Formambil');
+});
+Route::get('/jadwal', function () {
+    return view('petani.jadwal');
+});
+Route::get('/request', function () {
+    return view('request');
+});
 
 Auth::routes();
 
@@ -49,4 +64,4 @@ Route::middleware('auth')->group(function(){
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
 Route::post('/profile/changePass', [ProfileController::class, 'changePassword'])->name('profile.changePass');
- });
+});

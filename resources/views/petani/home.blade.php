@@ -1,35 +1,13 @@
 @extends('layouts.template')
 
 @section('content')
-
-
+<div class="container mt-5">
 <div class="main-content">
-    <!-- Header -->
-    <div class="container mt-5">
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="{{asset('img/jumb-1.jpg')}}" width="50px" height="400px" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{{asset('img/jumb-2.jpg')}}" width="50px" height="400px" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="{{asset('img/jumb-3.jpg')}}" width="50px" height="400px" alt="Third slide">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-    <br><br><br>
+<<<<<<< HEAD
     <div class="header bg-gradient-info py-7 py-lg-6 pt-lg-8 mb-3">
+=======
+    <div class="header bg-gradient-success py-7 py-lg-6 pt-lg-8 mb-3">
+>>>>>>> 179eddb9cc64b4c488d9be16f7cee0eb74804b92
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">
@@ -38,19 +16,119 @@
                         <p class="text-lead text-white">Bertani dengan bijak agar tetap mewariskan tanah subur pada
                             generasi berikutnya.</p>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
-        <div class="separator separator-bottom separator-skew zindex-100">
-            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
-                xmlns="http://www.w3.org/2000/svg">
-                <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-            </svg>
+    </div>
+    <div class="container">
+        <div class="row pt-3">
+            <div class="col-md-3 mt-3">
+                <div class="card h-100" style="">
+                    <a class="card-block stretched-link text-decoration-none" href="">
+                        <img class="card-img-top" src="{{asset('img/p_phonska.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">NPK Phonska</h4>
+                            <p class="card-text text-center">Pupuk majemuk lengkap bermutu</p>
+                            <ul> Kandungan
+                                <li> N (Nitrogen) : 15%</li>
+                                <li>P2O5 (Fosfat) : 15%</li>
+                                <li> K (Kalium) : 15%</li>
+                                <li> S (Sulfur) : 10%</li>
+                            </ul>
+                            <ul>Spesifikasi
+                                <li> Bentuk granul</li>
+                                <li> Larut dalam air</li>
+                                <li> Warna merah muda</li>
+                                <li>Kemasan 50kg</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <h4 class="card-text"></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="card h-100" style="">
+                    <a class="card-block stretched-link text-decoration-none" href="">
+                        <img class="card-img-top" src="{{asset('img/p_sp.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">SP-36</h4>
+                            <p class="card-text text-center">Pupuk tunggal dari batuan fosfat yang ditambang </p>
+                            <ul> Kandungan
+                                <li>P2O5 (Fosfat) : 36% </li>
+                                <li>Air : 5% </li>
+                                <li>H3PO4 : 6% </li>
+                                <br>
+                            </ul>
+                            <ul>Spesifikasi
+                                <li> Bentuk butiran</li>
+                                <li> Larut dalam air</li>
+                                <li> Warna abu-abu</li>
+                                <li> Kemasan 50kg</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <h4 class="card-text"></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="card h-100" style="">
+                    <a class="card-block stretched-link text-decoration-none" href="">
+                        <img class="card-img-top" src="{{asset('img/p_urea.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">Urea</h4>
+                            <p class="card-text text-center">Pupuk yang mengandung nitrogen (N) berkadar tinggi </p>
+                            <ul> Kandungan
+                                <li>Air : 0,50%</li>
+                                <li>Biuret : 1%</li>
+                                <li>Nitrogen : 46%</li>
+                                <br>
+                            </ul>
+                            <ul>Spesifikasi
+                                <li> Bentuk butiran</li>
+                                <li> Larut dalam air</li>
+                                <li> Warna merah muda</li>
+                                <li> Kemasan 50kg</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <h4 class="card-text"></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3 mt-3">
+                <div class="card h-100" style="">
+                    <a class="card-block stretched-link text-decoration-none" href="">
+                        <img class="card-img-top" src="{{asset('img/p_za.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h4 class="card-title text-center">ZA</h4>
+                            <p class="card-text text-center">Pupuk yang mengandung amonium sulfat </p>
+                            <ul>Kandungan
+                                <li>Nitrogen : 20,8%</li>
+                                <li>Belerang : 23,8%</li>
+                                <li>H2SO4 : 0.1% </li>
+                                <li>Air : 1% </li>
+                            </ul>
+                            <ul>Spesifikasi
+                                <li> Bentuk kristal</li>
+                                <li> Larut dalam air</li>
+                                <li> Warna putih</li>
+                                <li> Kemasan 50kg</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <h4 class="card-text"></h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
-
-
 </div>
 <br>
 @endsection

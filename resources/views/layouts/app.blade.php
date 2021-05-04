@@ -136,7 +136,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </nav>
-        <div class="header bg-gradient-warning py-7 py-lg-8 pt-lg-9">
+        <div class="header bg-gradient-success py-7 py-lg-8 pt-lg-9">
             <div class="container">
                 <div class="header-body text-center mb-5">
                     <div class="row justify-content-center">
@@ -158,9 +158,12 @@
                             <h1 class="text-white">Selamat Datang di Pupuk.in</h1>
 
                             <p class="text-lead text-light mt-3 mb-0">
-                                Log in untuk melakukan aktifitas terhadap pendistribusian pupuk bersubsidi, dan silahkan
-                                Register jika belum mempunyai akun.
-                                Terima Kasih
+                                <b>
+                                    Log in untuk melakukan aktifitas terhadap pendistribusian pupuk bersubsidi, dan
+                                    silahkan
+                                    Register jika belum mempunyai akun.
+                                    Terima Kasih
+                                </b>
                             </p>
                         </div>
                     </div>
@@ -175,7 +178,7 @@
         </div>
         <div class="container mt--8 pb-5">
             <!-- Table -->
-           @yield('content')
+            @yield('content')
         </div>
     </div>
 
