@@ -3,11 +3,7 @@
 @section('content')
 <div class="container mt-5">
 <div class="main-content">
-<<<<<<< HEAD
-    <div class="header bg-gradient-info py-7 py-lg-6 pt-lg-8 mb-3">
-=======
     <div class="header bg-gradient-success py-7 py-lg-6 pt-lg-8 mb-3">
->>>>>>> 179eddb9cc64b4c488d9be16f7cee0eb74804b92
         <div class="container">
             <div class="header-body text-center mb-7">
                 <div class="row justify-content-center">

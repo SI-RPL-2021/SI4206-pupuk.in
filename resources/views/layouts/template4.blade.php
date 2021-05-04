@@ -64,48 +64,15 @@
                                             <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard"
                                                 class="nav-link">Dashboard</a>
                                         </li>
-<<<<<<< HEAD
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard-alternative"
-                                                class="nav-link">Alternative</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-forms" data-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="navbar-forms">
-                                    <i class="ni ni-single-copy-04 text-pink"></i>
-                                    <span class="nav-link-text">Forms</span>
-                                </a>
-                            </li>
-=======
                                     </ul>
                                 </div>
                             </li
->>>>>>> 179eddb9cc64b4c488d9be16f7cee0eb74804b92
                             <li class="nav-item ">
                                 <a class="nav-link collapsed" href="#navbar-tables" data-toggle="collapse" role="button"
                                     aria-expanded="false" aria-controls="navbar-tables">
                                     <i class="ni ni-align-left-2 text-default"></i>
                                     <span class="nav-link-text">Tables</span>
                                 </a>
-<<<<<<< HEAD
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="https://argon-dashboard-pro-laravel.creative-tim.com/charts">
-                                    <i class="ni ni-chart-pie-35 text-info"></i>
-                                    <span class="nav-link-text">Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link"
-                                    href="https://argon-dashboard-pro-laravel.creative-tim.com/calendar">
-                                    <i class="ni ni-calendar-grid-58 text-red"></i>
-                                    <span class="nav-link-text">Calendar</span>
-                                </a>
-                            </li>
-=======
                                 <div class="collapse " id="navbar-tables">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
@@ -139,7 +106,6 @@
                                     </ul>
                                 </div>
                                 </li>
->>>>>>> 179eddb9cc64b4c488d9be16f7cee0eb74804b92
                         </ul>
                     </div>
                 </div>
