@@ -39,9 +39,6 @@ Route::get('/form', function () {
 Route::get('/jadwal', function () {
     return view('petani.jadwal');
 });
-Route::get('/request', function () {
-    return view('request');
-});
 
 Auth::routes();
 

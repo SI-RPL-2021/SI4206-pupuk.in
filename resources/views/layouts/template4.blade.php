@@ -129,16 +129,14 @@
     <div class="main-content">
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
                     <!-- Collapse header -->
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                        </li>
-                        <li class="nav-item"> 
-                        </li>
-                        <li class="nav-item">
-                        </li>
                     </ul>
                     <hr class="d-lg-none" />
                     <ul class="navbar-nav align-items-center ml-auto ml-md-0">
