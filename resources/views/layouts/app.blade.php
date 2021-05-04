@@ -136,7 +136,7 @@
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                                    document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
 
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </nav>
-        <div class="header bg-gradient-warning py-7 py-lg-8 pt-lg-9">
+        <div class="header bg-gradient-success py-7 py-lg-8 pt-lg-9">
             <div class="container">
                 <div class="header-body text-center mb-5">
                     <div class="row justify-content-center">

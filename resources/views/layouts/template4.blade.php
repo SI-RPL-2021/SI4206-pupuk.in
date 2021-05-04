@@ -13,6 +13,7 @@
     <link href="{{asset ('/img/logokotak.png')}}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="{{asset('/argon/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
@@ -63,139 +64,9 @@
                                             <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard"
                                                 class="nav-link">Dashboard</a>
                                         </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard-alternative"
-                                                class="nav-link">Alternative</a>
-                                        </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link active collapsed" href="#navbar-examples" data-toggle="collapse"
-                                    role="button" aria-expanded="false" aria-controls="navbar-examples">
-                                    <i class="fab fa-laravel" style="color: #f4645f;"></i>
-                                    <span class="nav-link-text" style="color: #f4645f;">Laravel Examples</span>
-                                </a>
-                                <div class="collapse" id="navbar-examples" style="">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item active">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/profile"
-                                                class="nav-link">Profile</a>
-                                        </li>
-                                        <li class="nav-item  ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/role"
-                                                class="nav-link">Role Management</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/user"
-                                                class="nav-link">User Management</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/category"
-                                                class="nav-link">Category Management</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tag"
-                                                class="nav-link">Tag Management</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/item"
-                                                class="nav-link">Item Management</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-pages" data-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="navbar-pages">
-                                    <i class="ni ni-collection text-yellow"></i>
-                                    <span class="nav-link-text">Pages</span>
-                                </a>
-                                <div class="collapse " id="navbar-pages">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/timeline"
-                                                class="nav-link">Timeline</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-components" data-toggle="collapse"
-                                    role="button" aria-expanded="false" aria-controls="navbar-components">
-                                    <i class="ni ni-ui-04 text-info"></i>
-                                    <span class="nav-link-text">Components</span>
-                                </a>
-                                <div class="collapse " id="navbar-components">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/buttons"
-                                                class="nav-link">Buttons</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/cards"
-                                                class="nav-link">Cards</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/grid"
-                                                class="nav-link">Grid</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/notifications"
-                                                class="nav-link">Notifications</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/icons"
-                                                class="nav-link">Icons</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/typography"
-                                                class="nav-link">Typography</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="#navbar-multilevel" class="nav-link collapsed"
-                                                data-toggle="collapse" role="button" aria-expanded="false"
-                                                aria-controls="navbar-multilevel">Multi level</a>
-                                            <div class="collapse" id="navbar-multilevel" style="">
-                                                <ul class="nav nav-sm flex-column">
-                                                    <li class="nav-item">
-                                                        <a href="#!" class="nav-link ">Thirdlevelmenu</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#!" class="nav-link ">Justanotherlink</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a href="#!" class="nav-link ">Onelastlink</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-forms" data-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="navbar-forms">
-                                    <i class="ni ni-single-copy-04 text-pink"></i>
-                                    <span class="nav-link-text">Forms</span>
-                                </a>
-                                <div class="collapse " id="navbar-forms">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/elements"
-                                                class="nav-link">Elements</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/components"
-                                                class="nav-link">Components</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/validation"
-                                                class="nav-link">Validations</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                            </li
                             <li class="nav-item ">
                                 <a class="nav-link collapsed" href="#navbar-tables" data-toggle="collapse" role="button"
                                     aria-expanded="false" aria-controls="navbar-tables">
@@ -206,57 +77,35 @@
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
                                             <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
-                                                class="nav-link">Tables</a>
+                                                class="nav-link">Table Distributor</a>
                                         </li>
                                         <li class="nav-item ">
                                             <a href="https://argon-dashboard-pro-laravel.creative-tim.com/sortable"
-                                                class="nav-link">Sortable</a>
-                                        </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/datatables"
-                                                class="nav-link">Datatables</a>
+                                                class="nav-link">Table Petani</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-maps" data-toggle="collapse" role="button"
-                                    aria-expanded="false" aria-controls="navbar-maps">
-                                    <i class="ni ni-map-big text-primary"></i>
-                                    <span class="nav-link-text">Maps</span>
-                                </a>
-                                <div class="collapse " id="navbar-maps">
+                        
+                                <li class="nav-item ">
+                                    <a class="nav-link collapsed" href="#navbar-tambah" data-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="navbar-tambah">
+                                    <i class="ni ni-single-copy-04 text-primary"></i>
+                                    <span class="nav-link-text">Tambah Data</span>
+                                    </a>
+                                    <div class="collapse " id="navbar-tambah">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/googlemaps"
-                                                class="nav-link">Google</a>
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">AddPupuk</a>
                                         </li>
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/vectormaps"
-                                                class="nav-link">Vector</a>
+                                         <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">AddDistributor</a>
                                         </li>
                                     </ul>
                                 </div>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="https://argon-dashboard-pro-laravel.creative-tim.com/widgets">
-                                    <i class="ni ni-archive-2 text-green"></i>
-                                    <span class="nav-link-text">Widgets</span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="https://argon-dashboard-pro-laravel.creative-tim.com/charts">
-                                    <i class="ni ni-chart-pie-35 text-info"></i>
-                                    <span class="nav-link-text">Charts</span>
-                                </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link"
-                                    href="https://argon-dashboard-pro-laravel.creative-tim.com/calendar">
-                                    <i class="ni ni-calendar-grid-58 text-red"></i>
-                                    <span class="nav-link-text">Calendar</span>
-                                </a>
-                            </li>
+                                </li>
                         </ul>
                     </div>
                 </div>
@@ -280,9 +129,6 @@
     <div class="main-content">
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="{{asset('/img/logopanjang.png')}}" />
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
                     aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -305,21 +151,6 @@
                     </div>
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('distributor.home')}}">
-                                <span class="nav-link-inner--text">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lilili</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lululu</span>
-                            </a>
-                        </li>
                     </ul>
                     <hr class="d-lg-none" />
                     <ul class="navbar-nav align-items-center ml-auto ml-md-0">
@@ -349,7 +180,7 @@
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                     <i class="ni ni-user-run"></i>
                                     <span>{{ __('Logout') }}</span>
                                 </a>
@@ -413,6 +244,7 @@
     <!-- Argon JS -->
     <!-- <script src="/argon/argon/js/argon.js?v=1.0.1"></script> -->
     <!-- <script src="/argon/argon/js/demo.min.js"></script> -->
+    
 
 </body>
 
