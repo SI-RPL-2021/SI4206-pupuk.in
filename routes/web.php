@@ -30,6 +30,15 @@ Route::get('/coba', function () {
 Route::get('/das', function () {
     return view('admin.dashboardd');
 });
+Route::get('/ambil', function () {
+    return view('petani.pengambilan');
+});
+Route::get('/form', function () {
+    return view('petani.Formambil');
+});
+Route::get('/jadwal', function () {
+    return view('petani.jadwal');
+});
 
 Auth::routes();
 
