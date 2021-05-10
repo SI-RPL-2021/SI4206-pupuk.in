@@ -14,6 +14,9 @@ class PetaniController extends Controller
     public function home(){
         return view('petani.home');
     }
+    public function ambil(){
+        return view('petani.pengambilan');
+    }
     public function data(){
         $petani_id = Auth::user()->petani->id ?? 0;
         if($petani_id){

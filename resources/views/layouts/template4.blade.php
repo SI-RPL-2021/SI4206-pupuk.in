@@ -53,20 +53,13 @@
                         <!-- Nav items -->
                         <ul class="navbar-nav">
                             <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-dashboards" data-toggle="collapse"
+                                <a class="nav-link collapsed" href="{{route('admin.dashboard')}}" data-toggle="collapse"
                                     role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                                     <i class="ni ni-shop text-primary"></i>
                                     <span class="nav-link-text">Dashboards</span>
                                 </a>
-                                <div class="collapse" id="navbar-dashboards" style="">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard"
-                                                class="nav-link">Dashboard</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li
+                                
+                            </li>
                             <li class="nav-item ">
                                 <a class="nav-link collapsed" href="#navbar-tables" data-toggle="collapse" role="button"
                                     aria-expanded="false" aria-controls="navbar-tables">
@@ -76,7 +69,7 @@
                                 <div class="collapse " id="navbar-tables">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                            <a href=""
                                                 class="nav-link">Table Distributor</a>
                                         </li>
                                         <li class="nav-item ">
@@ -96,13 +89,13 @@
                                     <div class="collapse " id="navbar-tambah">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                            <a href="{{route('admin.pupuk')}}"
                                                 class="nav-link">AddPupuk</a>
                                         </li>
-                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                         <!-- <li class="nav-item ">
+                                            <a href="#"
                                                 class="nav-link">AddDistributor</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 </li>
