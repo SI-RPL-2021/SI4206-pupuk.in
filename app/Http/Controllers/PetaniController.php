@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Distributor;
 use App\Models\Petani;
+use App\Models\Pupuk;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -15,7 +16,9 @@ class PetaniController extends Controller
         return view('petani.home');
     }
     public function ambil(){
-        return view('petani.pengambilan');
+        $pupuks = Pupuk::all();
+        $petani = Petani::where('user_id',Auth::user()->id)->first();
+        return view('petani.pengambilan',compact('pupuks','petani'));
     }
     public function data(){
         $petani_id = Auth::user()->petani->id ?? 0;
