@@ -88,6 +88,8 @@
 
     <!-- Argon CSS -->
     <link type="text/css" href="/argon/css/argon.css?v=2.0.0" rel="stylesheet">
+    <link type="text/css" href="/argon/css/argon.min.css" rel="stylesheet">
+    <link type="text/css" href="/css/app.css" rel="stylesheet">
 </head>
 
 <body>

@@ -30,9 +30,7 @@ Route::get('/coba', function () {
 Route::get('/das', function () {
     return view('admin.dashboardd');
 });
-Route::get('/ambil', function () {
-    return view('petani.pengambilan');
-});
+
 Route::get('/form', function () {
     return view('petani.Formambil');
 });
@@ -56,6 +54,7 @@ Route::middleware('auth')->group(function(){
     Route::middleware('role:Petani')->prefix('petani')->group(function(){
         Route::get('/home', [PetaniController::class, 'home'])->name('petani.home');
         Route::get('/data', [PetaniController::class, 'data'])->name('petani.data');
+        Route::get('/pengambilan',[PetaniController::class, 'ambil'])->name('petani.ambil'); 
         Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('petani.addPetani');
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
