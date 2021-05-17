@@ -28,21 +28,24 @@
                                 <label class="form-control-label" for="input-harga">Harga per kilo</label>
                                 <input type="number" name="harga" id="input-harga" class="form-control"
                                     placeholder="Harga" value="" required="">
-
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label" for="input-harga">Kuota/10 m2</label>
                                 <input type="number" name="kuota_per_10m2" id="input-harga" class="form-control"
-                                    placeholder="" value="" required="">
-
+                                    placeholder="Kuota" value="" required="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Gambar Pupuk</label>
+                                <div class="custom-file">
+                                    <label class="custom-file-label" for="input-picture">Pilih Gambar</label>
+                                    <input type="file" name="gambar" class="custom-file-input" id="input-picture">
+                                </div>
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success mt-4">Save</button>
                             </div>
                         </div>
                     </form>
-
-                    <hr class="my-4">
                 </div>
             </div>
         </div>
