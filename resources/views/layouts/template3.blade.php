@@ -13,6 +13,7 @@
     <link href="{{asset ('/img/logokotak.png')}}" rel="icon" type="image/png">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="{{asset('/argon/vendor/nucleo/css/nucleo.css')}}" rel="stylesheet">
@@ -25,12 +26,100 @@
 </head>
 
 <body class="">
+    <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white transi"
+        id="sidenav-main">
+        <div class="scroll-wrapper scrollbar-inner scroll-scrollx_visible" style="position: relative;">
+            <div class="scrollbar-inner scroll-content scroll-scrollx_visible scroll-scrolly_visible"
+                style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 724px;">
+                <div class="sidenav-header d-flex align-items-center">
+                    <a class="navbar-brand text-center" href="/">
+                        <img src="{{asset('/img/logopanjang.png')}}" />
+                    </a>
+                    <div class="ml-auto">
+                        <!-- Sidenav toggler -->
+                        <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin"
+                            data-target="#sidenav-main">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-inner">
+                    <!-- Collapse -->
+                    <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                        <!-- Nav items -->
+                        <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link collapsed" href="#navbar-dashboards" data-toggle="collapse"
+                                    role="button" aria-expanded="false" aria-controls="navbar-dashboards">
+                                    <i class="ni ni-shop text-primary"></i>
+                                    <span class="nav-link-text">Dashboard</span>
+                                </a>
+                            </li>                         
+                                <li class="nav-item ">
+                                    <a class="nav-link collapsed" href="#navbar-tambah" data-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="navbar-tambah">
+                                    <i class="ni ni-single-copy-04 text-primary"></i>
+                                    <span class="nav-link-text">Tambah Data</span>
+                                    </a>
+                                    <div class="collapse " id="navbar-tambah">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">AddPupuk</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">AddDistributor</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link collapsed" href="#navbar-tambah" data-toggle="collapse" role="button"
+                                    aria-expanded="false" aria-controls="navbar-tambah">
+                                    <i class="ni ni-calendar-grid-58 text-primary"></i>
+                                    <span class="nav-link-text">Jadwal</span>
+                                    </a>
+                                    <div class="collapse " id="navbar-tambah">
+                                    <ul class="nav nav-sm flex-column">
+                                        <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">Lihat Jadwal</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                                class="nav-link">Tambah Jadwal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-element scroll-x scroll-scrollx_visible scroll-scrolly_visible">
+                <div class="scroll-element_outer">
+                    <div class="scroll-element_size"></div>
+                    <div class="scroll-element_track"></div>
+                    <div class="scroll-bar" style="width: 10px; left: 0px;"></div>
+                </div>
+            </div>
+            <div class="scroll-element scroll-y scroll-scrollx_visible scroll-scrolly_visible">
+                <div class="scroll-element_outer">
+                    <div class="scroll-element_size"></div>
+                    <div class="scroll-element_track"></div>
+                    <div class="scroll-bar" style="height: 60px; top: 0px;"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="main-content">
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="{{asset('/img/logopanjang.png')}}" />
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
                     aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -53,21 +142,6 @@
                     </div>
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('distributor.home')}}">
-                                <span class="nav-link-inner--text">Home</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lilili</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lululu</span>
-                            </a>
-                        </li>
                     </ul>
                     <hr class="d-lg-none" />
                     <ul class="navbar-nav align-items-center ml-auto ml-md-0">
@@ -97,7 +171,7 @@
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
-                                  document.getElementById('logout-form').submit();">
+                                document.getElementById('logout-form').submit();">
                                     <i class="ni ni-user-run"></i>
                                     <span>{{ __('Logout') }}</span>
                                 </a>
@@ -110,38 +184,40 @@
                 </div>
             </div>
         </nav>
-    </div>
-    
-    @yield('content')
+        @yield('content')
 
-    <footer class="py-5">
-        <div class="container">
-            <div class="row align-items-center justify-content-lg-between">
-                <div class="col-xl-6">
-                    <div class="copyright text-center text-lg-left text-muted">
-                        &copy; 2021 <a href="/" class="font-weight-bold ml-1" target="_blank">Pupuk.in</a>
+        <footer class="py-5">
+            <div class="container">
+                <div class="row align-items-center justify-content-lg-between">
+                    <div class="col-xl-6">
+                        <div class="copyright text-center text-lg-left text-muted">
+                            &copy; 2021 <a href="/" class="font-weight-bold ml-1" target="_blank">Pupuk.in</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" target="_blank"><i class="fab fa-github"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" target="_blank"><i class="fab fa-github"></i></a>
-                        </li>
-                    </ul>
-                </div>
             </div>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
@@ -160,6 +236,7 @@
     <!-- <script src="/argon/argon/js/argon.js?v=1.0.1"></script> -->
     <!-- <script src="/argon/argon/js/demo.min.js"></script> -->
     
+
 </body>
 
 </html>
