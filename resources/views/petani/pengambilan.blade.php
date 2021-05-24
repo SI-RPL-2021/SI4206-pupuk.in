@@ -20,6 +20,33 @@
                                     value="" required="" autofocus="">
 
                             </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-harga">Jatah Tahunan</label>
+                                <input type="number" name="harga" id="input-harga" class="form-control"
+                                    placeholder="Harga" value="" required="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-harga">Lokasi Pengambilan</label>
+                                <select id="role" name="role" class="form-control @error('role') is-invalid @enderror"
+                                    name="email" value="{{ old('role') }}" required autocomplete="role">
+                                    <option value="2"></option>
+                                    <option value="3"></option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-harga">Periode Pengambilan</label>
+                                <select id="role" name="role" class="form-control @error('role') is-invalid @enderror"
+                                    name="email" value="{{ old('role') }}" required autocomplete="role">
+                                    <option value="1"></option>
+                                    <option value="2">Pengambilan 1</option>
+                                    <option value="3">Pengambilan 2</option>
+                                    <option value="3">Pengambilan 3</option>
+                                </select>
+                            </div>
+                            
+                    </form>
+
+                    
                 </div>
             </div>
         </div>
