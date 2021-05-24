@@ -45,6 +45,9 @@ Route::get('/request', function () {
 Route::get('/rekap', function () {
     return view('distributor.rekap');
 });
+Route::get('/mencatatpupuk', function () {
+    return view('distributor.mencatatpupuk');
+});
 
 Auth::routes();
 
