@@ -43,10 +43,18 @@
                                     <option value="3">Pengambilan 3</option>
                                 </select>
                             </div>
-                            
+                            <div class="form-group">
+                                <label class="form-control-label" for="input-harga">Total Pembayaran </label>
+                                <input type="number" name="harga" id="input-harga" class="form-control"
+                                    placeholder="Harga" value="" required="">
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-success mt-4">Lanjut</button>
+                            </div>
+                        </div>
                     </form>
 
-                    
+                    <hr class="my-4">
                 </div>
             </div>
         </div>
