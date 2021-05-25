@@ -33,6 +33,12 @@ Route::get('/jadwal', function () {
 Route::get('/request', function () {
     return view('request');
 });
+Route::get('/rekap', function () {
+    return view('distributor.rekap');
+});
+Route::get('/mencatatpupuk', function () {
+    return view('distributor.mencatatpupuk');
+});
 
 
 
