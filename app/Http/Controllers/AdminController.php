@@ -19,10 +19,13 @@ class AdminController extends Controller
         return view ('admin.addPupuk');
     }
     public function addPupuk(Request $request){
+        $file = time().'.'.$request->gambar->extension();
+        $request->gambar->move(public_path('img/photo'),$file);
         $pupuk = Pupuk::insert([
             'nama' => $request->nama,
             'harga' => $request->harga,
             'kuota_per_10m2' => $request->kuota_per_10m2,
+            'gambar' => $file,
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);

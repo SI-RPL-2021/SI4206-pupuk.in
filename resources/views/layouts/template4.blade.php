@@ -53,20 +53,13 @@
                         <!-- Nav items -->
                         <ul class="navbar-nav">
                             <li class="nav-item ">
-                                <a class="nav-link collapsed" href="#navbar-dashboards" data-toggle="collapse"
+                                <a class="nav-link" href="{{route('distributor.home')}}"
                                     role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                                     <i class="ni ni-shop text-primary"></i>
                                     <span class="nav-link-text">Dashboards</span>
                                 </a>
-                                <div class="collapse" id="navbar-dashboards" style="">
-                                    <ul class="nav nav-sm flex-column">
-                                        <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/dashboard"
-                                                class="nav-link">Dashboard</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li
+                                
+                            </li>
                             <li class="nav-item ">
                                 <a class="nav-link collapsed" href="#navbar-tables" data-toggle="collapse" role="button"
                                     aria-expanded="false" aria-controls="navbar-tables">
@@ -76,7 +69,7 @@
                                 <div class="collapse " id="navbar-tables">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                            <a href=""
                                                 class="nav-link">Table Distributor</a>
                                         </li>
                                         <li class="nav-item ">
@@ -96,13 +89,13 @@
                                     <div class="collapse " id="navbar-tambah">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
-                                                class="nav-link">AddPupuk</a>
+                                            <a href="{{route('distributor.dataLokasi')}}"
+                                                class="nav-link">Tambah Lokasi</a>
                                         </li>
-                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/tables"
+                                         <!-- <li class="nav-item ">
+                                            <a href="#"
                                                 class="nav-link">AddDistributor</a>
-                                        </li>
+                                        </li> -->
                                     </ul>
                                 </div>
                                 </li>
@@ -135,20 +128,6 @@
                 </button>
                 <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
                     <!-- Collapse header -->
-                    <div class="navbar-collapse-header">
-                        <div class="row">
-                            <div class="col-6 collapse-brand">
-                            </div>
-                            <div class="col-6 collapse-close">
-                                <button type="button" class="navbar-toggler" data-toggle="collapse"
-                                    data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Navbar items -->
                     <ul class="navbar-nav mr-auto">
                     </ul>
@@ -193,8 +172,9 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
 
+        @yield('content')
+    
         <footer class="py-5">
             <div class="container">
                 <div class="row align-items-center justify-content-lg-between">
