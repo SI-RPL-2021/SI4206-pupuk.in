@@ -27,16 +27,13 @@ Route::get('/', function () {
 Route::get('/coba', function () {
     return view('layouts.template4');
 });
-Route::get('/das', function () {
-    return view('admin.dashboardd');
-});
-
-Route::get('/form', function () {
-    return view('petani.Formambil');
-});
 Route::get('/jadwal', function () {
     return view('petani.jadwal');
 });
+Route::get('/pembayaran', function () {
+    return view('petani.pembayaran');
+});
+
 
 Auth::routes();
 
@@ -49,13 +46,20 @@ Route::middleware('auth')->group(function(){
     Route::middleware('role:Distributor')->prefix('distributor')->group(function(){
         Route::get('/home', [DistributorController::class, 'home'])->name('distributor.home');
         Route::get('/Data', [DistributorController::class, 'data'])->name('distributor.data');
-        Route::post('/addData', [DistributorController::class, 'addData'])->name('admin.addData');
+        Route::post('/addData', [DistributorController::class, 'addData'])->name('distributor.addData');
+        Route::get('/formlokasi', [DistributorController::class, 'dataLokasi'])->name('distributor.dataLokasi');
+        Route::post('/lokasiPengambilan', [DistributorController::class, 'lokasi'])->name('distributor.lokasi');
     });
     Route::middleware('role:Petani')->prefix('petani')->group(function(){
         Route::get('/home', [PetaniController::class, 'home'])->name('petani.home');
         Route::get('/data', [PetaniController::class, 'data'])->name('petani.data');
         Route::get('/pengambilan',[PetaniController::class, 'ambil'])->name('petani.ambil'); 
         Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('petani.addPetani');
+        Route::get('/formPengambilan/{id}',[PetaniController::class, 'form'])->name('petani.Formambil'); 
+        Route::post('/tambahPengambilan', [PetaniController::class, 'pengambilan'])->name('petani.pengambilan');
+        Route::get('/bayar/{id}',[PetaniController::class, 'bayar'])->name('petani.bayar');
+        Route::post('/pembayaran',[PetaniControlle::class, 'pembayaran'])->name('peyani.pembayaran');
+        Route::get('/cart',[PetaniController::class, 'cart'])->name('petani.cart');
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');
