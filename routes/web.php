@@ -30,9 +30,7 @@ Route::get('/coba', function () {
 Route::get('/jadwal', function () {
     return view('petani.jadwal');
 });
-Route::get('/pembayaran', function () {
-    return view('petani.pembayaran');
-});
+
 
 
 Auth::routes();
@@ -57,9 +55,10 @@ Route::middleware('auth')->group(function(){
         Route::post('/addPetani', [PetaniController::class, 'addPetani'])->name('petani.addPetani');
         Route::get('/formPengambilan/{id}',[PetaniController::class, 'form'])->name('petani.Formambil'); 
         Route::post('/tambahPengambilan', [PetaniController::class, 'pengambilan'])->name('petani.pengambilan');
-        Route::get('/bayar/{id}',[PetaniController::class, 'bayar'])->name('petani.bayar');
-        Route::post('/pembayaran',[PetaniControlle::class, 'pembayaran'])->name('peyani.pembayaran');
         Route::get('/cart',[PetaniController::class, 'cart'])->name('petani.cart');
+        Route::get('/bayarPupuk/{id}',[PetaniController::class, 'bayar'])->name('petani.bayar');
+        Route::patch('/pembayaran/{id}/update',[PetaniControlle::class, 'pembayaran'])->name('petani.pembayaran');
+       
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');

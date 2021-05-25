@@ -53,7 +53,7 @@
                         <!-- Nav items -->
                         <ul class="navbar-nav">
                             <li class="nav-item ">
-                                <a class="nav-link collapsed" href="{{route('admin.dashboard')}}" data-toggle="collapse"
+                                <a class="nav-link" href="{{route('distributor.home')}}"
                                     role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                                     <i class="ni ni-shop text-primary"></i>
                                     <span class="nav-link-text">Dashboards</span>
@@ -89,8 +89,8 @@
                                     <div class="collapse " id="navbar-tambah">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="{{route('admin.pupuk')}}"
-                                                class="nav-link">AddPupuk</a>
+                                            <a href="{{route('distributor.dataLokasi')}}"
+                                                class="nav-link">Tambah Lokasi</a>
                                         </li>
                                          <!-- <li class="nav-item ">
                                             <a href="#"

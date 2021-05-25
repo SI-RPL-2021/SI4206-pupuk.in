@@ -76,7 +76,7 @@ class PetaniController extends Controller
         }else{
             Toastr::error('Pemesanan gagal ', 'Gagal!');
         }
-        return redirect()->route('petani.bayar');
+        return redirect()->route('petani.cart');
     }
     public function cart(){
         $carts = Pembayaran::where('petani_id', Auth::user()->petani->id)->get();
@@ -84,7 +84,19 @@ class PetaniController extends Controller
     }
     public function bayar($id){
         $bayar = Pembayaran::find($id);
-        return view('petani.bayar',compact('bayar'));
+        return view('petani.pembayaran',compact('bayar'));
+    }
+    public function pembayaran($id, Request $request){
+        $pembayaran = Pembayaran::where('id',$id)->update([
+            'status'=> 'Lunas',
+            'metode'=> $request->metode,
+        ]);
+        if($pembayaran){
+            Toastr::success('Pembayaran berhasil ', 'Sukses!');
+        }else{
+            Toastr::error('Pembayaran gagal ', 'Gagal!');
+        }
+        return redirect()->route('petani.cart');
     }
     
 }
