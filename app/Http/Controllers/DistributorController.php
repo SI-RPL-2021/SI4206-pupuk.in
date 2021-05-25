@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Distributor;
+use App\Models\TempatPengambilan;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -40,6 +41,25 @@ class DistributorController extends Controller
         }
         return redirect()->route('distributor.data');
     }
-    
+
+    public function dataLokasi(){
+        return view('distributor.tempatPengambilan');
+    }
+
+    public function lokasi(Request $request){
+        $lokasi= TempatPengambilan::insert([
+            'distributor_id' => Auth::user()->distributor->id,
+            'nama_tempat' => $request -> nama,
+            'alamat' => $request -> alamat,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        if($lokasi){
+            Toastr::success('Data berhasil diinput', 'Sukses!');
+        }else{
+            Toastr::error('Data gagal diinput', 'Gagal!');
+        }
+        return redirect()->route('distributor.dataLokasi');
+    }
     
 }
