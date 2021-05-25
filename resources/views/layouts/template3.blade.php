@@ -60,12 +60,12 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lilili</span>
+                                <span class="nav-link-inner--text">Jadwal</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">
-                                <span class="nav-link-inner--text">Lululu</span>
+                                <span class="nav-link-inner--text">Lokasi </span>
                             </a>
                         </li>
                     </ul>

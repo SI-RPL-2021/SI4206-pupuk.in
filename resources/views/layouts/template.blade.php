@@ -69,8 +69,16 @@
                             </a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav mr-auto">
+
+                    </ul>
                     <hr class="d-lg-none" />
                     <ul class="navbar-nav align-items-center ml-auto ml-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('petani.cart')}}">
+                                <span class="nav-link-inner--text ni ni-cart"></span>
+                            </a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false">
@@ -111,7 +119,7 @@
             </div>
         </nav>
     </div>
-    
+
     @yield('content')
 
     <footer class="py-5">
@@ -141,7 +149,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
@@ -159,7 +168,7 @@
     <!-- Argon JS -->
     <!-- <script src="/argon/argon/js/argon.js?v=1.0.1"></script> -->
     <!-- <script src="/argon/argon/js/demo.min.js"></script> -->
-    
+
 </body>
 
 </html>
