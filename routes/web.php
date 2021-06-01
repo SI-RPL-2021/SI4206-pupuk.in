@@ -24,9 +24,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/coba', function () {
-    return view('layouts.template4');
-});
 Route::get('/das', function () {
     return view('admin.dashboardd');
 });
@@ -39,7 +36,12 @@ Route::get('/form', function () {
 Route::get('/jadwal', function () {
     return view('petani.jadwal');
 });
-
+Route::get('/bayar', function () {
+    return view('petani.pembayaran');
+});
+Route::get('/rekap', function () {
+    return view('distributor.rekap');
+});
 Auth::routes();
 
 Route::middleware('auth')->group(function(){

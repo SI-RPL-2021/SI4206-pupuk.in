@@ -19,7 +19,6 @@
     <link href="{{asset('/argon/vendor/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
-
     <!-- Argon CSS -->
     <link type="text/css" href="{{asset('argon/css/argon.css?v=2.0.0')}}" rel="stylesheet">
 </head>

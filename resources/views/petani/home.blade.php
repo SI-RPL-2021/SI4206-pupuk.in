@@ -11,8 +11,8 @@
                         <h1 class="text-white">Pupuk.in</h1>
                         <p class="text-lead text-white">Bertani dengan bijak agar tetap mewariskan tanah subur pada
                             generasi berikutnya.</p>
+                            <hr class="my-4">
                     </div>
-
                 </div>
             </div>
         </div>
