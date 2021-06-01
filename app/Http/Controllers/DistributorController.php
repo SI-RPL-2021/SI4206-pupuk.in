@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Distributor;
+use App\Models\TempatPengambilan;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,6 +13,15 @@ class DistributorController extends Controller
 {
     public function home(){
         return view('distributor.home');
+    }
+    public function data(){
+        $distributor_id = Auth::user()->distributor->id ?? 0;
+        if($distributor_id){
+            $distributor = Distributor::findOrFail($distributor_id);
+        }else{
+            $distributor = null ;
+        }
+        return view('distributor.addData',compact('distributor'));
     }
     public function addData(Request $request){
         $distributor = Distributor::updateOrCreate([
@@ -31,10 +41,25 @@ class DistributorController extends Controller
         }
         return redirect()->route('distributor.data');
     }
-    public function data(){
-        $distributor_id = Auth::user()->distributor->id;
-        $distributor = Distributor::findOrFail($distributor_id);
-        return view('distributor.addData',compact('distributor'));
+
+    public function dataLokasi(){
+        return view('distributor.tempatPengambilan');
+    }
+
+    public function lokasi(Request $request){
+        $lokasi= TempatPengambilan::insert([
+            'distributor_id' => Auth::user()->distributor->id,
+            'nama_tempat' => $request -> nama,
+            'alamat' => $request -> alamat,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+        ]);
+        if($lokasi){
+            Toastr::success('Data berhasil diinput', 'Sukses!');
+        }else{
+            Toastr::error('Data gagal diinput', 'Gagal!');
+        }
+        return redirect()->route('distributor.dataLokasi');
     }
     
 }

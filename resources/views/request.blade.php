@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/e08391607d.js" crossorigin="anonymous"></script>
-    <title>Entry Data</title>
+    <title>Registrasi</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -32,13 +32,13 @@
             </div>
             <div class="card bg-light">
                 <div class="card-body">
-                    <h5 class="card-title text-center">DATA PETANI</h5>
+                    <h5 class="card-title text-center">Request</h5>
                     <!-- form -->
                     <div class="container">
                         <form class="mt-4">
                             <div class="form-group row">
                                 <div class="col ml-4">
-                                    <label class="col-form-label">Nama Petani</label>
+                                    <label class="col-form-label">Nama  petani</label>
                                 </div>
                                 <div class="col-6 mr-5">
                                     <input type="text" class="form-control" placeholder="Masukan nama">
@@ -52,6 +52,7 @@
                                     <input type="number" class="form-control" placeholder="Masukan Nomor">
                                 </div>
                             </div>
+                            </div>
                             <div class="form-group row mt-4">
                                 <div class="col ml-4">
                                     <label class="col-form-label">Alamat</label>
@@ -63,27 +64,22 @@
                             </div>
                             <div class="form-group row mt-4">
                                 <div class="col ml-4">
-                                    <label class="col-form-label">Luas Lahan</label>
+                                    <label class="col-form-label">Requestan</label>
                                 </div>
                                 <div class="col-6 mr-5">
-                                    <input type="number" class="form-control" placeholder="Masukan Email">
+                                    <select id="inputState" class="form-control">
+                                        <option selected></option>
+                                        <option>Penambahan pupuk</option>
+                                        <option>Pengambilan tempat pupuk</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="form-group row mt-4">
-                                <div class="col ml-4">
-                                    <label class="col-form-label">Kebutuhan Pupuk</label>
-                                </div>
-                                <div class="col-6 mr-5">
-                                    <input type="text" class="form-control" placeholder="Masukan Email">
-                                </div>
-                            </div>
+
                             <div class="form-group">
                                 <div class="col ml-2">
-                                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                    <button type="submit" class="btn btn-primary btn-block">Request</button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
                 </div>
                 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
                     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

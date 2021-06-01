@@ -8,7 +8,7 @@
                 <div class="card-header">
                     <div class="row align-items-center">
                         <div class="col-8">
-                            <h3 class="mb-0">Add Data Petani</h3>
+                            <h3 class="mb-0">Data Petani</h3>
                         </div>
                     </div>
                 </div>

@@ -49,10 +49,6 @@ class LoginController extends Controller
         else if($user->role->role === 'Distributor'){
             return redirect()->intended(route('distributor.home'));
         }
-        // if($user->role->name === 'Distributor'){
-        //     return redirect()->intended(route('admin.dashboard'));
-        // }
-
         return redirect()->intended($redirectTo);
     }
     
