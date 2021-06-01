@@ -88,6 +88,8 @@
 
     <!-- Argon CSS -->
     <link type="text/css" href="/argon/css/argon.css?v=2.0.0" rel="stylesheet">
+    <link type="text/css" href="/argon/css/argon.min.css" rel="stylesheet">
+    <link type="text/css" href="/css/app.css" rel="stylesheet">
 </head>
 
 <body>
@@ -158,9 +160,12 @@
                             <h1 class="text-white">Selamat Datang di Pupuk.in</h1>
 
                             <p class="text-lead text-light mt-3 mb-0">
-                                Log in untuk melakukan aktifitas terhadap pendistribusian pupuk bersubsidi, dan silahkan
-                                Register jika belum mempunyai akun.
-                                Terima Kasih
+                                <b>
+                                    Log in untuk melakukan aktifitas terhadap pendistribusian pupuk bersubsidi, dan
+                                    silahkan
+                                    Register jika belum mempunyai akun.
+                                    Terima Kasih
+                                </b>
                             </p>
                         </div>
                     </div>
@@ -175,7 +180,7 @@
         </div>
         <div class="container mt--8 pb-5">
             <!-- Table -->
-           @yield('content')
+            @yield('content')
         </div>
     </div>
 
