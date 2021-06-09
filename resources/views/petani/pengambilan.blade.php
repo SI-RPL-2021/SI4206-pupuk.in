@@ -10,19 +10,21 @@
                     <img class="card-img-top" src="/img/photo/{{$pupuk->gambar}}" alt="Card image cap">
                     <div class="card-body">
                         <h4 class="card-title text-center">{{ $pupuk->nama}}</h4>
-                        <p class="card-text text-center">Harga : RP {{number_format($pupuk->harga,0,",",".")}}  per KG</p>
+                        <p class="card-text text-center">Harga : RP {{number_format($pupuk->harga,0,",",".")}} per KG
+                        </p>
                         <p class="text-center"> Kuota
                             {{number_format($petani->luas_tanah/10*$pupuk->kuota_per_10m2,0,",",".")}} Kg
                         </p>
-                        <p class="text-center">Progres Pengambilan
+                        <p class="text-center">Pengambilan : {{$petani->total_pengambilan($pupuk->id)}} kg
                         <div class="progress">
                             <div class="progress-bar bg-info" role="progressbar" aria-valuenow="" aria-valuemin="0"
-                                aria-valuemax="100" style="width: 60%;"></div>
+                                aria-valuemax="100" style="width: {{$petani->total_pengambilan($pupuk->id)/($petani->luas_tanah/10*$pupuk->kuota_per_10m2)*100}}%;"></div>
                         </div>
                         </p>
                     </div>
                     <div class="card-footer bg-transparent border-0">
-                        <h4 class="card-text text-center"><a type="button" href="/petani/formPengambilan/{{$pupuk->id}}" class="btn btn-primary">Ambil</a>
+                        <h4 class="card-text text-center"><a type="button" href="/petani/formPengambilan/{{$pupuk->id}}"
+                                class="btn btn-primary">Ambil</a>
                         </h4>
                     </div>
                 </div>

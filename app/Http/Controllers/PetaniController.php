@@ -98,6 +98,4 @@ class PetaniController extends Controller
         }
         return redirect()->route('petani.cart');
     }
-    
-}
-
+}  
