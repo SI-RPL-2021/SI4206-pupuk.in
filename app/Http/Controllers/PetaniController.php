@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Auth;
 class PetaniController extends Controller
 {
     public function home(){
-        return view('petani.home');
+        $petani = Petani::where('user_id',Auth::user()->id)->first();
+        return view('petani.home',compact('petani'));
     }
     public function ambil(){
         $pupuks = Pupuk::all();
