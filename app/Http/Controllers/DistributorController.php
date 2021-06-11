@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Distributor;
+use App\Models\Petani;
+use App\Models\Pupuk;
 use App\Models\TempatPengambilan;
+use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -12,7 +15,8 @@ use Illuminate\Support\Facades\Auth;
 class DistributorController extends Controller
 {
     public function home(){
-        return view('distributor.home');
+            $petanis = Petani::all();
+        return view('distributor.home',compact('petanis'));
     }
     public function data(){
         $distributor_id = Auth::user()->distributor->id ?? 0;

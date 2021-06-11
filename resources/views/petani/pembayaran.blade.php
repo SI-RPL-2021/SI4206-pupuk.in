@@ -11,7 +11,7 @@
                         <div class="col">
                             <div class="card-body">
                                 <div class="card-body">
-                                    <form action="{{route('petani.pembayaran',$bayar->id)}}" methode="post" enctype="multipart/form-data">
+                                    <form action="{{route('petani.pembayaran',$bayar->id)}}" method="post" enctype="multipart/form-data">
                                         <div class="form-group">
                                             @csrf
                                             @method('patch')
@@ -45,9 +45,9 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <div class="d-grid gap-2">
+                                            
                                             <button type="submit" name="submit" class="btn btn-primary mt-4">Bayar</button>
-                                            </div>
+
                                         </div>
                                     </form>
                                 </div>
