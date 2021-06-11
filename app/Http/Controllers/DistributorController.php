@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Auth;
 class DistributorController extends Controller
 {
     public function home(){
-            $petanis = Petani::all();
-        return view('distributor.home',compact('petanis'));
+        $petanis = Petani::all();
+        $pupuks = Pupuk::all();
+        $distributor = Distributor::where('user_id',Auth::user()->id)->first();
+        return view('distributor.home',compact('petanis','pupuks','distributor'));
     }
     public function data(){
         $distributor_id = Auth::user()->distributor->id ?? 0;
