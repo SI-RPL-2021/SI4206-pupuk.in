@@ -26,7 +26,7 @@
 </head>
 
 <body class="">
-    <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white transi navbar-responsive"
+    <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white transi"
         id="sidenav-main">
         <div class="scroll-wrapper scrollbar-inner scroll-scrollx_visible" style="position: relative;">
             <div class="scrollbar-inner scroll-content scroll-scrollx_visible scroll-scrolly_visible"
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="navbar-inner navbar-responsive">
+                <div class="navbar-inner">
                     <!-- Collapse -->
                     <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                         <!-- Nav items -->
@@ -69,7 +69,11 @@
                                 <div class="collapse " id="navbar-tables">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="{{route('distributor.petani')}}"
+                                            <a href=""
+                                                class="nav-link">Table Distributor</a>
+                                        </li>
+                                        <li class="nav-item ">
+                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/sortable"
                                                 class="nav-link">Table Petani</a>
                                         </li>
                                     </ul>

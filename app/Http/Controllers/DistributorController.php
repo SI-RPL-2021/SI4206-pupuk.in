@@ -15,8 +15,52 @@ use Illuminate\Support\Facades\Auth;
 class DistributorController extends Controller
 {
     public function home(){
-            $petanis = Petani::all();
-        return view('distributor.home',compact('petanis'));
+        $petanis = Petani::all();
+        $pupuks = Pupuk::all();
+        $distributor = Distributor::where('user_id',Auth::user()->id)->first();
+        return view('distributor.home',compact('petanis','pupuks','distributor'));
+    }
+    public function petani(){
+        $petanis = Petani::all()->where('distributor_id',Auth::user()->distributor->id);
+        $distributor = Distributor::where('user_id',Auth::user()->id)->first();
+        return view('distributor.petani',compact('petanis','distributor'));
+    }
+    public function cari($id){
+        $cari = Petani::find($id);
+        return view('distributor.petani',compact('cari'));
+    }
+    public function edit_petani($id, Request $request){
+        $petani = Petani::where('id',$id)->update([
+            'luas_tanah'=> $request->luas_tanah,
+        ]);
+        if($petani){
+            Toastr::success('Data berhasil diupdate', 'Sukses!');
+        }else{
+            Toastr::error('Data gagal diinput', 'Gagal!');
+        }
+        return redirect()->route('distributor.petani');
+    }
+    public function ban($id){
+        $petani = Petani::where('id',$id)->update([
+            'status'=> 'Non aktif',
+        ]);
+        if($petani){
+            Toastr::success('Data berhasil diupdate', 'Sukses!');
+        }else{
+            Toastr::error('Data gagal diinput', 'Gagal!');
+        }
+        return redirect()->route('distributor.petani');
+    }
+    public function aktif($id){
+        $petani = Petani::where('id',$id)->update([
+            'status'=> 'aktif',
+        ]);
+        if($petani){
+            Toastr::success('Data berhasil diupdate', 'Sukses!');
+        }else{
+            Toastr::error('Data gagal diinput', 'Gagal!');
+        }
+        return redirect()->route('distributor.petani');
     }
     public function data(){
         $distributor_id = Auth::user()->distributor->id ?? 0;
