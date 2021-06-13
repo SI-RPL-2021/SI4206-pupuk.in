@@ -109,5 +109,10 @@ class DistributorController extends Controller
         }
         return redirect()->route('distributor.dataLokasi');
     }
-    
+    public function pengambilan(){
+        $lokasis = TempatPengambilan::where('distributor_id',Auth::user()->distributor->id)->get();
+        $pupuks = Pupuk::all();
+        $distributor = Distributor::where('user_id',Auth::user()->id)->first();
+        return view('distributor.pengambilan',compact('lokasis','pupuks','distributor'));
+    }
 }

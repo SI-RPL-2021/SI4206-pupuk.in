@@ -72,4 +72,7 @@ class Distributor extends Model
 	public function total_pembayaran($petani_id){
 		return $this->hasMany(Pembayaran::class)->where('distributor_id',Auth::user()->distributor->id)->where('petani_id',$petani_id)->sum('jumlah_pembayaran');
 	}
+	public function pengambilan($pupuk_id,$tempat_id){
+		return $this->hasMany(Pembayaran::class)->where('distributor_id',Auth::user()->distributor->id)->where('tempat_pengambilan_id',$tempat_id)->where('pupuk_id',$pupuk_id)->sum('jumlah_pengambilan');
+	}
 }
