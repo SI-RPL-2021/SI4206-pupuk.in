@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="card-title text-uppercase text-muted mb-0">Jumlah distributor</h5>
-                            <span class="h2 font-weight-bold mb-0">8.000</span>
+                            <span class="h2 font-weight-bold mb-0">{{$distributor}}</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
@@ -30,7 +30,7 @@
                         <div class="col">
                             <h5 class="card-title text-uppercase text-muted mb-0">Jumlah 
                                 <br>Petani</h5>
-                            <span class="h2 font-weight-bold mb-0">8.000</span>
+                            <span class="h2 font-weight-bold mb-0">{{$petani}}</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
@@ -102,7 +102,7 @@
                     <div class="card bg-transparent">
                     <!-- Card header -->
                             <div class="card-header bg-transparent border-0">
-                                <h3 class="mb-0">Distributor</h3>
+                                <h3 class="mb-0">Pupuk</h3>
                             </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -116,13 +116,13 @@
                                 </tr>
                             </thead>
                                 <tbody class="list">
-                                @foreach($distributors as $distributor)
+                                @foreach($pupuks as $pupuk)
                                     <tr>
-                                        <th scope="row">{{ $distributor->user->name }}</th>
+                                        <th scope="row">{{ $pupuk->nama }}</th>
                                         <td>
                                             <span class="badge badge-dot mr-4">
                                                 <i class="bg-primary"></i>
-                                                <span class="status">{{ $distributor->status }}</span>
+                                                <span class="status"></span>
                                             </span>
                                         </td>
                                         <td >Rp 20,000</td>

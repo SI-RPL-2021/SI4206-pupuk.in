@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Distributor;
+use App\Models\Petani;
 use App\Models\Pupuk;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
@@ -12,8 +13,10 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function dashboard(){
-        $distributors = Distributor::all();
-        return view('admin.dashboard',compact('distributors'));
+        $distributor = Distributor::count();
+        $petani = Petani::count();
+        $pupuks = Pupuk::all();
+        return view('admin.dashboard',compact('distributor','petani','pupuks'));
     }
     public function pupuk(){
         return view ('admin.addPupuk');
