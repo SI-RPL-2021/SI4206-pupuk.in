@@ -46,11 +46,15 @@ Route::middleware('auth')->group(function(){
     });
     Route::middleware('role:Distributor')->prefix('distributor')->group(function(){
         Route::get('/home', [DistributorController::class, 'home'])->name('distributor.home');
+        // petani
         Route::get('/petani', [DistributorController::class, 'petani'])->name('distributor.petani');
         Route::get('/petani/{id}', [DistributorController::class, 'cari'])->name('distributor.CariPetani');
         Route::patch('/petani/{id}/edit', [DistributorController::class, 'edit_petani'])->name('distributor.EditPetani');
         Route::patch('/petani/{id}/ban', [DistributorController::class, 'ban'])->name('distributor.BanPetani');
         Route::patch('/petani/{id}/aktif', [DistributorController::class, 'aktif'])->name('distributor.AktifPetani');
+        // Pengambilan
+        Route::get('/pengambilan', [DistributorController::class, 'pengambilan'])->name('distributor.pengambilan');
+        // Lokasi
         Route::get('/Data', [DistributorController::class, 'data'])->name('distributor.data');
         Route::post('/addData', [DistributorController::class, 'addData'])->name('distributor.addData');
         Route::get('/formlokasi', [DistributorController::class, 'dataLokasi'])->name('distributor.dataLokasi');

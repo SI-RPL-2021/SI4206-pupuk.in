@@ -13,7 +13,6 @@
                         <p class="text-lead text-white">Bertani dengan bijak agar tetap mewariskan tanah subur pada
                             generasi berikutnya.</p>
                     </div>
-
                 </div>
             </div>
         </div>

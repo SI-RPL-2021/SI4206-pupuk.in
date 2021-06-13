@@ -72,6 +72,10 @@
                                             <a href="{{route('distributor.petani')}}"
                                                 class="nav-link">Table Petani</a>
                                         </li>
+                                        <li class="nav-item ">
+                                            <a href="{{route('distributor.pengambilan')}}"
+                                                class="nav-link">Table Pengambilan</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </li>
