@@ -32,7 +32,7 @@
                                 <td>{{$petani->luas_tanah}} m2</td>
                                 <td>Rp {{number_format($distributor->total_pembayaran($petani->id),0,",",".")}} </td>
                                 <td class="text-left">
-                                    <a type="button" href="{{ route('distributor.CariPetani',$petani->id) }}"
+                                    <a type="button" href="{{ route('distributor.EditPetani', $petani->id) }}"
                                         class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
                                         Edit
                                     </a>
