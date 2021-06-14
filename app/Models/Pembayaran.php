@@ -72,4 +72,5 @@ class Pembayaran extends Model
 		return $this->belongsTo(TempatPengambilan::class);
 	}
 
+
 }

@@ -44,5 +44,11 @@ class Pupuk extends Model
 	{
 		return $this->hasMany(Pembayaran::class);
 	}
+	public function pengambilan($pupuk_id){
+		return $this->hasMany(Pembayaran::class)->where('status','Lunas')->where('pupuk_id',$pupuk_id)->sum('jumlah_pengambilan');
+	}
+	public function pembayaran($pupuk_id){
+		return $this->hasMany(Pembayaran::class)->where('status','Lunas')->where('pupuk_id',$pupuk_id)->sum('jumlah_pembayaran');
+	}
 	
 }
