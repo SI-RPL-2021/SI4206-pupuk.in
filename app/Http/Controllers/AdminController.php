@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Distributor;
+use App\Models\Pembayaran;
+use App\Models\Petani;
 use App\Models\Pupuk;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
@@ -12,8 +14,12 @@ use Illuminate\Support\Facades\Auth;
 class AdminController extends Controller
 {
     public function dashboard(){
-        $distributors = Distributor::all();
-        return view('admin.dashboard',compact('distributors'));
+        $distributor = Distributor::count();
+        $petani = Petani::count();
+        $pupuks = Pupuk::all();
+        $pengambilan =Pembayaran::where('status','Lunas')->sum('jumlah_pengambilan');
+        $pembayaran =Pembayaran::where('status','Lunas')->sum('jumlah_pembayaran');
+        return view('admin.dashboard',compact('distributor','petani','pupuks','pengambilan','pembayaran'));
     }
     public function pupuk(){
         return view ('admin.addPupuk');
