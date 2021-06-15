@@ -11,7 +11,7 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="card-title text-uppercase text-muted mb-0">Jumlah distributor</h5>
-                            <span class="h2 font-weight-bold mb-0">8.000</span>
+                            <span class="h2 font-weight-bold mb-0">{{$distributor}}</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
@@ -30,7 +30,7 @@
                         <div class="col">
                             <h5 class="card-title text-uppercase text-muted mb-0">Jumlah 
                                 <br>Petani</h5>
-                            <span class="h2 font-weight-bold mb-0">8.000</span>
+                            <span class="h2 font-weight-bold mb-0">{{$petani}}</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
@@ -48,8 +48,8 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <h5 class="card-title text-uppercase text-muted mb-0">Stok Pupuk Tersedia</h5>
-                            <span class="h2 font-weight-bold mb-0">924</span>
+                            <h5 class="card-title text-uppercase text-muted mb-0">Pupuk Yang Diambil (Kg)</h5>
+                            <span class="h2 font-weight-bold mb-0">{{number_format($pengambilan,0,",",".")}}</span>
                         </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
@@ -66,12 +66,12 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h5 class="card-title text-uppercase text-muted mb-0">Stok Pupuk Diambil</h5>
-                                <span class="h2 font-weight-bold mb-0">421</span>
+                                <h5 class="card-title text-uppercase text-muted mb-0">Jumlah Pembayaran (Rp)</h5>
+                                <span class="h2 font-weight-bold mb-0">{{number_format($pembayaran,0,",",".")}}</span>
                             </div>
                         <div class="col-auto">
                             <div class="icon icon-shape bg-gradient-blue text-white rounded-circle shadow">
-                                <i class="ni ni-sound-wave"></i>
+                                <i> Rp </i>
                             </div>
                         </div>
                         </div>
@@ -102,40 +102,26 @@
                     <div class="card bg-transparent">
                     <!-- Card header -->
                             <div class="card-header bg-transparent border-0">
-                                <h3 class="mb-0">Distributor</h3>
+                                <h3 class="mb-0">Pupuk</h3>
                             </div>
                         <div class="card-body">
                             <div class="table-responsive">
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col" class="sort" data-sort="name">Nama</th>
-                                    <th scope="col" class="sort" data-sort="budget">Status</th>
+                                    <th scope="col" class="sort" data-sort="name">Nama Pupuk</th>
+                                    <th scope="col" class="sort" data-sort="budget">Pengambilan</th>
                                     <th scope="col" class="sort" data-sort="status">Total Prembayaran</th>
                                     <th scope="col" class="sort" data-sort="completion">Completion</th>
                                 </tr>
                             </thead>
                                 <tbody class="list">
-                                @foreach($distributors as $distributor)
+                                @foreach($pupuks as $pupuk)
                                     <tr>
-                                        <th scope="row">{{ $distributor->user->name }}</th>
-                                        <td>
-                                            <span class="badge badge-dot mr-4">
-                                                <i class="bg-primary"></i>
-                                                <span class="status">{{ $distributor->status }}</span>
-                                            </span>
-                                        </td>
-                                        <td >Rp 20,000</td>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <span class="completion mr-2">60%</span>
-                                                <div>
-                                                    <div class="progress">
-                                                        <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <th scope="row">{{ $pupuk->nama }}</th>
+                                        <td >{{$pupuk->pengambilan($pupuk->id)}} Kg</td>
+                                        <td >Rp {{number_format($pupuk->pembayaran($pupuk->id),0,",",".")}} </td>
+                                        
                                     </tr>
                                     @endforeach
                                 </tbody>

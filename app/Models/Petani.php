@@ -62,4 +62,9 @@ class Petani extends Model
 	{
 		return $this->hasMany(Pembayaran::class);
 	}
+
+	public function total_pengambilan($pupuk_id){
+		return $this->hasMany(Pembayaran::class)->where('pupuk_id', $pupuk_id)->sum('jumlah_pengambilan');
+	}
+	
 }

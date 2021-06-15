@@ -8,6 +8,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Class Pembayaran
@@ -70,4 +71,6 @@ class Pembayaran extends Model
 	{
 		return $this->belongsTo(TempatPengambilan::class);
 	}
+
+
 }
