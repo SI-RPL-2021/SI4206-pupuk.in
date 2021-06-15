@@ -21,6 +21,18 @@
         <td>12 April 2020</td>
         <td>@mdo</td>
     </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td>Tata Sonya</td>
+        <td>12 April 2020</td>
+        <td>@mdo</td>
+    </tr>
+    <tr>
+        <th scope="row">1</th>
+        <td>Tata Sonya</td>
+        <td>12 April 2020</td>
+        <td>@mdo</td>
+    </tr>
     </tbody>
 </table>
 </div>
