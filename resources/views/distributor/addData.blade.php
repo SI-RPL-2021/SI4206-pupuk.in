@@ -11,7 +11,7 @@
                             <h3 class="mb-0">Data Distributor</h3>
                         </div>
                     </div>
-                </div>
+                </diV>
                 <div class="card-body">
                     <form method="post" action="{{ route('distributor.addData') }}" autocomplete="off"
                         enctype="multipart/form-data">
