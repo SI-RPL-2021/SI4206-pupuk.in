@@ -9,6 +9,8 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Class Petani
@@ -66,5 +68,6 @@ class Petani extends Model
 	public function total_pengambilan($pupuk_id){
 		return $this->hasMany(Pembayaran::class)->where('pupuk_id', $pupuk_id)->sum('jumlah_pengambilan');
 	}
+	
 	
 }

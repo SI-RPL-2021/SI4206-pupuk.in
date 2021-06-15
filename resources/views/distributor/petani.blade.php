@@ -9,7 +9,7 @@
             <div class="card-header bg-transparent border-0">
                 <h3 class="mb-0">Daftar Petani</h3>
             </div>
-
+            
             <div class="card-body">
                 <div class="table">
                     <table class="table align-items-center table-flush">
@@ -22,7 +22,7 @@
                                 <th scope="col" class="sort" data-sort="budget">Aksi</th>
                             </tr>
                         </thead>
-                        @foreach($petanis as $petani)
+                        @foreach($petanis as $index=>$petani)
                         <tbody class="list">
                             <tr>
                                 <th scope="row">{{$petani->user->name}}</th>
@@ -33,11 +33,11 @@
                                 <td>Rp {{number_format($distributor->total_pembayaran($petani->id),0,",",".")}} </td>
                                 <td class="text-left">
                                     <a type="button" href="{{ route('distributor.EditPetani', $petani->id) }}"
-                                        class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModal">
+                                        class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal{{$index}}">
                                         Edit
                                     </a>
                                     <!-- Modal -->
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                    <div class="modal fade" id="modal{{$index}}" tabindex="-1" role="dialog"
                                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
@@ -76,6 +76,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @if( $petani->status == 'aktif')
                                     <form method="post" action="{{route('distributor.BanPetani', $petani->id)}}">
                                         @csrf
                                         @method('patch')
@@ -83,6 +84,7 @@
                                             Ban
                                         </button>
                                     </form>
+                                    @else
                                     <form method="post" action="{{route('distributor.AktifPetani', $petani->id)}}">
                                         @csrf
                                         @method('patch')
@@ -90,6 +92,7 @@
                                             Aktif
                                         </button>
                                     </form>
+                                    @endif
 
 
                                 </td>

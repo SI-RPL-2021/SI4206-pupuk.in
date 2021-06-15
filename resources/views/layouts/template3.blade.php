@@ -23,6 +23,7 @@
 
     <!-- Argon CSS -->
     <link type="text/css" href="{{asset('argon/css/argon.css?v=2.0.0')}}" rel="stylesheet">
+    @stack('css')
 </head>
 
 <body class="">
@@ -53,12 +54,11 @@
                         <!-- Nav items -->
                         <ul class="navbar-nav">
                             <li class="nav-item ">
-                                <a class="nav-link collapsed" href="{{route('admin.dashboard')}}" data-toggle="collapse"
-                                    role="button" aria-expanded="false" aria-controls="navbar-dashboards">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{route('admin.dashboard')}}">
                                     <i class="ni ni-shop text-primary"></i>
                                     <span class="nav-link-text">Dashboards</span>
                                 </a>
-                                
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link collapsed" href="#navbar-tables" data-toggle="collapse" role="button"
@@ -69,36 +69,34 @@
                                 <div class="collapse " id="navbar-tables">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href=""
-                                                class="nav-link">Table Distributor</a>
+                                            <a href="{{route('admin.distributor')}}" class="nav-link">Table
+                                                Distributor</a>
                                         </li>
                                         <li class="nav-item ">
-                                            <a href="https://argon-dashboard-pro-laravel.creative-tim.com/sortable"
-                                                class="nav-link">Table Petani</a>
+                                            <a href="{{route('admin.petani')}}" class="nav-link">Table Petani</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
-                        
-                                <li class="nav-item ">
-                                    <a class="nav-link collapsed" href="#navbar-tambah" data-toggle="collapse" role="button"
+
+                            <li class="nav-item ">
+                                <a class="nav-link collapsed" href="#navbar-tambah" data-toggle="collapse" role="button"
                                     aria-expanded="false" aria-controls="navbar-tambah">
                                     <i class="ni ni-single-copy-04 text-primary"></i>
                                     <span class="nav-link-text">Tambah Data</span>
-                                    </a>
-                                    <div class="collapse " id="navbar-tambah">
+                                </a>
+                                <div class="collapse " id="navbar-tambah">
                                     <ul class="nav nav-sm flex-column">
                                         <li class="nav-item ">
-                                            <a href="{{route('admin.pupuk')}}"
-                                                class="nav-link">AddPupuk</a>
+                                            <a href="{{route('admin.pupuk')}}" class="nav-link">Tambah Pupuk</a>
                                         </li>
-                                         <!-- <li class="nav-item ">
+                                        <!-- <li class="nav-item ">
                                             <a href="#"
                                                 class="nav-link">AddDistributor</a>
                                         </li> -->
                                     </ul>
                                 </div>
-                                </li>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -174,7 +172,7 @@
         </nav>
 
         @yield('content')
-    
+
         <footer class="py-5">
             <div class="container">
                 <div class="row align-items-center justify-content-lg-between">
@@ -224,7 +222,9 @@
     <!-- Argon JS -->
     <!-- <script src="/argon/argon/js/argon.js?v=1.0.1"></script> -->
     <!-- <script src="/argon/argon/js/demo.min.js"></script> -->
-    
+    @stack('js')
+
+
 
 </body>
 

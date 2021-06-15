@@ -1,7 +1,8 @@
+
 @extends('layouts.template')
 @section('content')
 
-@if( $petani->status == 'aktif')
+
 <div class="container mt-5">
 <div class="main-content">
     <div class="header bg-gradient-success py-7 py-lg-6 pt-lg-8 mb-3">
@@ -127,16 +128,5 @@
     </div>
 </div>
 <br>
-@else
-<div class="card bg-dark text-white border-0">
-    <img class="card-img" src="{{asset('img/jumb-3.jpg')}}" alt="Card image">
-    <div class="card-img-overlay d-flex align-items-center">
-        <div>
-            <h5 class="h2 card-title text-red mb-2"><b>Terindikasi !</b></h5>
-            <p class="card-text">Akun anda telan di BAN karena terindikasi melakukan PELANGGARAN</p>
-            <p class="card-text text-sm font-weight-bold">Segera Hubungi atau datang ke Tempat distributor Anda</p>
-        </div>
-    </div>
-</div>
-@endif
+
 @endsection
