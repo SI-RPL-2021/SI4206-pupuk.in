@@ -61,7 +61,7 @@ Route::middleware('auth')->group(function(){
         Route::get('/cart',[PetaniController::class, 'cart'])->name('petani.cart');
         Route::get('/bayarPupuk/{id}',[PetaniController::class, 'bayar'])->name('petani.bayar');
         Route::patch('/pembayaran/{id}/update',[PetaniController::class, 'pembayaran'])->name('petani.pembayaran');
-       
+    
     });
 Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
 Route::patch('/profile/update', [ProfileController::class, 'updateprofile'])->name('profile.update');

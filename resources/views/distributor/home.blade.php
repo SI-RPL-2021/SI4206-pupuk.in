@@ -23,24 +23,16 @@
                                         </thead>
                                         <tbody class="list">
                                             <tr>
-                                                <th scope="row">Tuyia Huma</th>
-                                                    <td>
-                                                        <span class="badge badge-dot mr-4">
-                                                            <i class="bg-primary"></i>
-                                                            <span class="status">Aktif</span>
-                                                        </span>
+                                                <th scope="row">NPK Phonska</th>
+                                                    <td> 2000 kg
                                                     </td>
-                                                    <td >Rp 20,000</td>
+                                                    <td >Pengambilan 1</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Tuyia Huma</th>
-                                                    <td>
-                                                        <span class="badge badge-dot mr-4">
-                                                            <i class="bg-danger"></i>
-                                                            <span class="status">Tidak Aktif</span>
-                                                        </span>
+                                                <th scope="row">Urea</th>
+                                                    <td> 1200 kg
                                                     </td>
-                                                    <td >Rp 20,000</td>
+                                                    <td >Pengambilan 2</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -67,24 +59,15 @@
                                         </thead>
                                         <tbody class="list">
                                             <tr>
-                                                <th scope="row">Tuyia Huma</th>
-                                                    <td>
-                                                        <span class="badge badge-dot mr-4">
-                                                            <i class="bg-primary"></i>
-                                                            <span class="status">Aktif</span>
-                                                        </span>
-                                                    </td>
-                                                    <td >Rp 20,000</td>
+                                                <th scope="row">NPK Phonska</th>
+                                                    <td>1200 Kg</td>
+                                                    <td >1000 kg</td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">Tuyia Huma</th>
-                                                    <td>
-                                                        <span class="badge badge-dot mr-4">
-                                                            <i class="bg-danger"></i>
-                                                            <span class="status">Tidak Aktif</span>
-                                                        </span>
+                                                <th scope="row">SP-36</th>
+                                                    <td> 2000 Kg
                                                     </td>
-                                                    <td >Rp 20,000</td>
+                                                    <td >1200 kg</td>
                                             </tr>
                                         </tbody>
                                     </table>
