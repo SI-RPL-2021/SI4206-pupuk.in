@@ -18,6 +18,7 @@ class CreatePupuksTable extends Migration
             $table->string('nama');
             $table->double('harga');
             $table->double('kuota_per_10m2');
+            $table->date('batas_pengambilan');
             $table->string('gambar');
             $table->timestamps();
         });

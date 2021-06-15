@@ -75,4 +75,10 @@ class Distributor extends Model
 	public function pengambilan($pupuk_id,$tempat_id){
 		return $this->hasMany(Pembayaran::class)->where('distributor_id',Auth::user()->distributor->id)->where('tempat_pengambilan_id',$tempat_id)->where('pupuk_id',$pupuk_id)->sum('jumlah_pengambilan');
 	}
+	public function luas($distributor_id){
+		return $this->hasMany(Petani::class)->where('distributor_id',$distributor_id)->sum('luas_tanah');
+	}
+	public function jumlah_petani($distributor_id){
+		return $this->hasMany(Petani::class)->where('distributor_id',$distributor_id)->count();
+	}
 }

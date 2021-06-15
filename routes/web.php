@@ -24,23 +24,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/coba', function () {
-    return view('layouts.template4');
-});
-Route::get('/jadwal', function () {
-    return view('petani.jadwal');
-});
-Route::get('/request', function () {
-    return view('request');
-});
-
-
-
 Auth::routes();
 
 Route::middleware('auth')->group(function(){
     Route::middleware('role:Admin')->prefix('admin')->group(function(){
-        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/dashboard', [AdminController::class, 'dashboard','chart'])->name('admin.dashboard');
+        // petani
+        Route::get('/petani', [AdminController::class, 'petani'])->name('admin.petani');
+        Route::patch('/petani/{id}/ban', [AdminController::class, 'banPetani'])->name('admin.BanPetani');
+        Route::patch('/petani/{id}/aktif', [AdminController::class, 'aktifPetani'])->name('admin.AktifPetani');
+        // distributor
+        Route::get('/distributor', [AdminController::class, 'distributor'])->name('admin.distributor');
+        Route::patch('/distributor/{id}/ban', [AdminController::class, 'banDistributor'])->name('admin.BanDistributor');
+        Route::patch('/distributor/{id}/aktif', [AdminController::class, 'aktifDistributor'])->name('admin.AktifDistributor');
+        // pupuk
         Route::get('/pupuk', [AdminController::class, 'pupuk'])->name('admin.pupuk');
         Route::post('/addPupuk', [AdminController::class, 'addPupuk'])->name('admin.addPupuk');
     });

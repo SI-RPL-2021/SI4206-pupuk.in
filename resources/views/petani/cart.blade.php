@@ -40,12 +40,14 @@
                                         {{$cart->status}}
                                     </span>
                                 </td>
+                                @if($cart->status == 'belum dibayar')
                                 <td class="text-center">
                                     <h4 class="card-text text-center"><a type="button"
                                             href="{{route('petani.bayar',$cart->id)}}"
                                             class="btn btn-primary">Bayar</a>
                                     </h4>
                                 </td>
+                                @endif
                             </tr>
                             @endforeach
                         </tbody>

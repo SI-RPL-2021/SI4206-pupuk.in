@@ -35,6 +35,10 @@
                                     placeholder="Kuota" value="" required="">
                             </div>
                             <div class="form-group">
+                                <label class="form-control-label" for="input-harga">Batas Waktu</label>
+                                <input class="form-control" name="date"type="date" value="" id="example-date-input" placeholder="Batas waktu">
+                            </div>
+                            <div class="form-group">
                                 <label class="form-control-label">Gambar Pupuk</label>
                                 <div class="custom-file">
                                     <label class="custom-file-label" for="input-picture">Pilih Gambar</label>

@@ -7,6 +7,7 @@ use App\Models\Pembayaran;
 use App\Models\Petani;
 use App\Models\Pupuk;
 use App\Models\TempatPengambilan;
+use App\Models\User;
 use Brian2694\Toastr\Facades\Toastr;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -16,13 +17,20 @@ class PetaniController extends Controller
 {
     public function home(){
         $petani = Petani::where('user_id',Auth::user()->id)->first();
+   
+        
+        // $peringatan=Toastr::warning('Batas Pengambilan Pupuk ', 'Perhatian!',["timeOut" => 1000, "closeButton" => true]);
+    
         return view('petani.home',compact('petani'));
-    }
+    
+}
+
     public function ambil(){
         $pupuks = Pupuk::all();
+        $pupuk =Pupuk::where('id',1)->first();
         $petani = Petani::where('user_id',Auth::user()->id)->first();
         $pembayarans = Pembayaran::all();
-        return view('petani.pengambilan',compact('pupuks','petani','pembayarans'));
+        return view('petani.pengambilan',compact('pupuks','petani','pembayarans','pupuk'));
     }
     public function data(){
         $petani_id = Auth::user()->petani->id ?? 0;

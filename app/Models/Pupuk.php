@@ -31,13 +31,15 @@ class Pupuk extends Model
 
 	protected $casts = [
 		'harga' => 'float',
-		'kuota_per_10m2' => 'float'
+		'kuota_per_10m2' => 'float',
+		'batas_pengambilan'=>'date'
 	];
 
 	protected $fillable = [
 		'nama',
 		'harga',
-		'kuota_per_10m2'
+		'kuota_per_10m2',
+		'batas_pengambilan'
 	];
 
 	public function pembayarans()
@@ -49,6 +51,12 @@ class Pupuk extends Model
 	}
 	public function pembayaran($pupuk_id){
 		return $this->hasMany(Pembayaran::class)->where('status','Lunas')->where('pupuk_id',$pupuk_id)->sum('jumlah_pembayaran');
+	}
+	public function daysLeft()
+	{
+		$target_date = $this->batas_pengambilan;
+		$daysLeft = Carbon::parse(Carbon::now())->diffInDays($target_date, false);
+		return $daysLeft >= 0 ? $daysLeft: 0 ;
 	}
 	
 }
