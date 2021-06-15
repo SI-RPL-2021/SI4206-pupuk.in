@@ -24,7 +24,6 @@ class PetaniController extends Controller
         return view('petani.home',compact('petani'));
     
 }
-
     public function ambil(){
         $pupuks = Pupuk::all();
         $pupuk =Pupuk::where('id',1)->first();
